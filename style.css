@@ -16,7 +16,7 @@ html {
 .hero-wrapper {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25)), 
-                url('chateau 1.png'); /* Change en .jpg si besoin */
+                url('images/chateau 1.png'); /* Change en .jpg si besoin */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
