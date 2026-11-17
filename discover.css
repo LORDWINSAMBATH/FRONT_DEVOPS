@@ -166,6 +166,8 @@ nav ul a:hover {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none;
 }
 
 /* Center the cards when there is enough space */

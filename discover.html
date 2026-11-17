@@ -28,7 +28,8 @@
                 <ul>
                     <li><a href="#">BLOG</a></li>
                     <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">MY PROFILE</a></li>
+                    <!-- Profile link based on the logged-in role -->
+                    <li><a href="#" id="profile-link">MY PROFILE</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,11 +64,12 @@
                     <p>Angelina Paris Rivoli</p>
                 </div>
 
-                <!-- Eiffel Tower -->
-                <div class="destination-card">
+                
+                <!-- Eiffel Tower - navigate to the information page -->
+                <a href="eiffel-tower.html" class="destination-card">
                     <img src="images copy/eiffel-tower.png" alt="Eiffel Tower">
                     <p>Eiffel Tower</p>
-                </div>
+                </a>
 
                 <!-- Last destination - temporary image -->
                 <div class="destination-card">
@@ -80,6 +82,18 @@
         </section>
 
     </div>
+
+<!-- Navigate to the correct profile based on user role -->
+<script>
+    const profileLink = document.getElementById("profile-link");
+    const userRole = sessionStorage.getItem("userRole");
+
+    if (userRole === "owner") {
+        profileLink.href = "owner-profile.html";
+    } else {
+        profileLink.href = "user-profile.html";
+    }
+</script>
 
 </body>
 </html>

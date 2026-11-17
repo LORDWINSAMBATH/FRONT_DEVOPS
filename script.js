@@ -39,3 +39,21 @@ window.addEventListener('click', (e) => {
         signupModal.classList.remove('show');
     }
 });
+
+/* ===== SIMULATED LOGIN ===== added by Leia 17/11 */
+
+// Get the login buttons
+const loginUserBtn = document.getElementById("login-user-btn");
+const loginOwnerBtn = document.getElementById("login-owner-btn");
+
+// Save the user role and open Discover
+loginUserBtn.addEventListener("click", function() {
+    sessionStorage.setItem("userRole", "user");
+    window.location.href = "discover.html";
+});
+
+// Save the owner role and open Owner Profile
+loginOwnerBtn.addEventListener("click", function() {
+    sessionStorage.setItem("userRole", "owner");
+    window.location.href = "owner-profile.html";
+});
