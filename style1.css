@@ -1,9 +1,55 @@
-
-
-
-
-
+*{
+    box-sizing: border-box;
+}
 
 html{
     font-family: "Nanum Myeongjo", serif;
+}
+
+body{
+    background-color: rgb(87, 89, 94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 12;
+    height: 100vh;
+    width: 100vh;
+    opacity: 0;
+}
+
+button{
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgb(red green blue );
+    border-radius: 40%;
+    color: black;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgb(red );
+    font-size: 10px;
+    padding: 10px 25px;
+    background-color: rgb(16, 143, 101);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 12;
+}
+.modal{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 50px;
+    box-shadow: 0 2px 4px rgb(red green blue );
+
+
 }
