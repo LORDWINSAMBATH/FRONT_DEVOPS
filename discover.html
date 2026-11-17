@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the CSS file for the Discover page -->
+    <link rel="stylesheet" href="discover.css">
+
+    <title>VEYA - Discover</title>
+
+    <!-- Google Fonts used in the website -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== MAIN PAGE CONTAINER ===== -->
+    <div class="discover-wrapper">
+
+        <!-- ===== NAVIGATION BAR ===== -->
+        <header class="main-head">
+            <nav>
+                <h1 id="logo">VEYA</h1>
+
+                <!-- Navigation links to other pages -->
+                <ul>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <!-- Profile link based on the logged-in role -->
+                    <li><a href="#" id="profile-link">MY PROFILE</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ===== DISCOVER SECTION ===== -->
+        <section class="discover">
+
+            <!-- Main title of the Discover page -->
+            <div class="discover-title">
+                <h2>DISCOVER YOUR COUNTRY WITH VEYA</h2>
+            </div>
+
+            
+            <!-- Container for all destination cards -->
+            <div class="destination-container">
+
+                <!-- First destination -->
+                <div class="destination-card">
+                    <img src="images copy/versailles-aerial.png" alt="Versailles">
+                    <p>Versailles</p>
+                </div>
+
+                <!-- Versailles Castle -->
+                <div class="destination-card">
+                    <img src="images copy/versailles-interior.png" alt="Versailles Castle">
+                    <p>Versailles Castle</p>
+                </div>
+
+                <!-- Angelina Paris -->
+                <div class="destination-card">
+                    <img src="images copy/angelina-paris.png" alt="Angelina Paris">
+                    <p>Angelina Paris Rivoli</p>
+                </div>
+
+                
+                <!-- Eiffel Tower - navigate to the information page -->
+                <a href="eiffel-tower.html" class="destination-card">
+                    <img src="images copy/eiffel-tower.png" alt="Eiffel Tower">
+                    <p>Eiffel Tower</p>
+                </a>
+
+                <!-- Last destination - temporary image -->
+                <div class="destination-card">
+                    <img src="images copy/versailles-castle.png" alt="Discover more">
+                    <p>Discover More</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+<!-- Navigate to the correct profile based on user role -->
+<script>
+    const profileLink = document.getElementById("profile-link");
+    const userRole = sessionStorage.getItem("userRole");
+
+    if (userRole === "owner") {
+        profileLink.href = "owner-profile.html";
+    } else {
+        profileLink.href = "user-profile.html";
+    }
+</script>
+
+</body>
+</html>
