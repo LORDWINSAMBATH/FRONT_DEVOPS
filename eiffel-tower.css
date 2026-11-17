@@ -1,0 +1,258 @@
+
+/* General styling for the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #211e1b;
+    color: white;
+}
+
+/* Main container */
+.eiffel-page {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 400px auto;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #493b25;
+}
+
+/* Left section: Eiffel Tower image */
+.eiffel-image {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+}
+
+.eiffel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Middle section: Rating and options */
+.eiffel-interaction {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 25px;
+    background: linear-gradient(
+        110deg,
+        #c5a34b,
+        #8c826a
+    );
+}
+
+/* Save, collection and visited buttons */
+.place-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 60px;
+}
+
+.place-options button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+/* Rating section */
+.rating-section {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stars {
+    color: white;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.rating-bar {
+    width: 55%;
+    height: 12px;
+    background-color: #dedede;
+    border-radius: 20px;
+}
+
+/* Right section: Eiffel Tower information */
+.eiffel-information {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    position: relative;
+    padding: 45px 30px;
+    background-color: #493b25;
+}
+
+.eiffel-information h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.eiffel-information h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.eiffel-information p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Arrow button */
+.next-button {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Bottom section: User advice */
+.advice-section {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    padding: 20px;
+    background-color: #493b25;
+}
+
+.advice-section h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* Review input area */
+.advice-form {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.advice-input {
+    width: 80%;
+    background-color: white;
+    color: #493b25;
+    padding: 10px;
+}
+
+.advice-input label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.advice-input textarea {
+    width: 100%;
+    height: 60px;
+    border: none;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+/* Enter button */
+.enter-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d9ac24;
+    color: white;
+    cursor: pointer;
+}
+
+/* Example review */
+.example-review {
+    width: 80%;
+    padding: 15px;
+    background-color: white;
+    color: #493b25;
+}
+
+.example-review p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 800px) {
+    .eiffel-page {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .eiffel-image {
+        grid-column: 1;
+        grid-row: 1;
+        min-height: 350px;
+    }
+
+    .eiffel-interaction {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .eiffel-information {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .advice-section {
+        grid-column: 1 / 3;
+        grid-row: 3;
+    }
+
+    .place-options {
+        flex-wrap: wrap;
+    }
+}
+
+/* Layout for mobile screens */
+@media (max-width: 500px) {
+    .eiffel-page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .eiffel-image {
+        height: 350px;
+    }
+
+    .eiffel-interaction {
+        min-height: 350px;
+    }
+
+    .eiffel-information {
+        padding: 30px;
+    }
+
+    .advice-input,
+    .example-review {
+        width: 100%;
+    }
+}

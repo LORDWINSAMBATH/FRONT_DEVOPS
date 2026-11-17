@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the CSS file for the owner profile -->
+    <link rel="stylesheet" href="owner-profile.css">
+
+    <!-- Google Fonts used on the website -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <title>VEYA - Owner Profile</title>
+</head>
+
+<body>
+
+    <!-- ===== MAIN PAGE CONTAINER ===== -->
+    <div class="owner-wrapper">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+
+            <!-- Restaurant owner information -->
+            <div class="profile-info">
+
+                <!-- Profile icon -->
+                <div class="profile-avatar">
+                    <svg viewBox="0 0 100 100" aria-hidden="true">
+                        <circle cx="50" cy="50" r="47" fill="white"/>
+                        <circle cx="50" cy="34" r="16"
+                                fill="none" stroke="#333"
+                                stroke-width="2"/>
+                        <path d="M20 82 V72 C20 48 80 48 80 72 V82"
+                              fill="none" stroke="#333"
+                              stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <!-- Restaurant name and email -->
+                <div class="profile-details">
+                    <p>Restaurant Name</p>
+                    <p>Name@restaurant.com</p>
+                </div>
+
+            </div>
+
+            <!-- ===== SIDEBAR NAVIGATION ===== -->
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>⌂</span> HOME
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>▤</span> NOTIFICATIONS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>⚙</span> SETTINGS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sign out button -->
+            <div class="sign-out">
+                <a href="#">SIGN OUT</a>
+            </div>
+
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="owner-content">
+
+            <!-- Blurred background behind the content -->
+            <div class="owner-background"></div>
+
+            <!-- ===== RESTAURANT SECTION ===== -->
+            <section class="restaurant-section">
+
+                <!-- Restaurant image -->
+                <div class="restaurant-image">
+                    <img src="images copy/typical-cafe-scene-paris.jpg"
+                         alt="Paris restaurant terrace">
+
+                    <!-- Manage restaurant button -->
+                    <button class="manage-button">
+                        MANAGE YOUR PLACES
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- ===== LATEST REVIEWS ===== -->
+            <section class="reviews-section">
+
+                <!-- Reviews heading -->
+                <div class="reviews-title">
+                    <h2>LATEST REVIEWS</h2>
+                </div>
+
+                <!-- List of customer reviews -->
+                <div class="reviews-list">
+
+                    <!-- First review -->
+                    <div class="review">
+                        <p>"We had delicious food and the service was super!"</p>
+                        <a href="#">Reply</a>
+                    </div>
+
+                    <!-- Second review -->
+                    <div class="review">
+                        <p>"Great experience, 10/10!"</p>
+                        <a href="#">Reply</a>
+                    </div>
+
+                    <!-- Third review -->
+                    <div class="review">
+                        <p>"I could really recommend their pizza"</p>
+                        <a href="#">Reply</a>
+                    </div>
+
+                    <!-- Fourth review -->
+                    <div class="review">
+                        <p>"Long queue to get a table but otherwise fine!"</p>
+                        <a href="#">Reply</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

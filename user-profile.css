@@ -1,0 +1,281 @@
+
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #493b25;
+    color: white;
+}
+
+/* Main profile layout */
+.profile-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+    min-height: 100vh;
+    background-color: #493b25;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 25px;
+}
+
+/* User information */
+.user-info {
+    margin-bottom: 60px;
+}
+
+.profile-picture {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.profile-picture span {
+    font-size: 55px;
+    color: #493b25;
+}
+
+.user-name,
+.user-email {
+    font-size: 14px;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* Sidebar navigation */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.sidebar-nav a,
+.sign-out {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sidebar-nav a:hover,
+.sign-out:hover {
+    color: #d6b04c;
+}
+
+/* Sign out link at the bottom */
+.sign-out {
+    margin-top: auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* Main content area */
+.profile-content {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 55px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    isolation: isolate;
+}
+
+/* Blurred restaurant background */
+.profile-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("images copy/typical-cafe-scene-paris.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(8px) brightness(0.7);
+    z-index: -1;
+}
+
+/* Grid containing the four profile cards */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px 45px;
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Individual image cards */
+.profile-card {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Images inside the cards */
+.profile-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Small zoom effect when hovering */
+.profile-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Card titles placed over the images */
+.card-title {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #eeeeee;
+    border: 1px solid #333333;
+    color: #222222;
+
+    padding: 8px 12px;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* User preferences section */
+.preferences {
+    width: 100%;
+    max-width: 650px;
+    background-color: #493b25;
+    padding: 15px 20px;
+}
+
+/* Preferences heading and edit link */
+.preferences-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.preferences-header h2 {
+    font-size: 13px;
+    font-weight: normal;
+    background-color: #eeeeee;
+    color: #222222;
+    padding: 7px 10px;
+}
+
+.preferences-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Grid with selected user interests */
+.preferences-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.preferences-list span {
+    font-size: 12px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 850px) {
+    .sidebar {
+        width: 200px;
+        min-width: 200px;
+        padding: 30px 15px;
+    }
+
+    .profile-content {
+        padding: 35px 20px;
+    }
+
+    .profile-grid {
+        gap: 20px;
+    }
+
+    .profile-card {
+        height: 170px;
+    }
+
+    .card-title {
+        font-size: 10px;
+        white-space: normal;
+        width: max-content;
+        max-width: 90%;
+    }
+}
+
+/* Mobile screen adjustments */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .user-info {
+        margin-bottom: 25px;
+    }
+
+    .sidebar-nav {
+        gap: 15px;
+    }
+
+    .sign-out {
+        margin-top: 25px;
+        padding-top: 0;
+    }
+
+    .profile-content {
+        min-height: 650px;
+        padding: 30px 15px;
+    }
+
+    .profile-grid {
+        gap: 15px;
+    }
+
+    .profile-card {
+        height: 150px;
+    }
+
+    .preferences-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .preferences-header {
+        flex-wrap: wrap;
+    }
+}

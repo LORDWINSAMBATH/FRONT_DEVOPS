@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEYA - Eiffel Tower</title>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="eiffel-tower.css">
+</head>
+
+<body>
+
+    <!-- Main container for the Eiffel Tower page -->
+    <main class="eiffel-page">
+
+        <!-- Left section: Eiffel Tower image -->
+        <section class="eiffel-image">
+            <img src="images copy/eiffel-tower.png"
+                 alt="Eiffel Tower in Paris">
+        </section>
+
+        <!-- Middle section: Save and rate the place -->
+        <section class="eiffel-interaction">
+
+            <!-- Options for the user -->
+            <div class="place-options">
+                <button type="button">SAVE</button>
+                <button type="button">ADD TO COLLECTION</button>
+                <button type="button">MARK AS VISITED</button>
+            </div>
+
+            <!-- Rating options -->
+            <div class="rating-section">
+
+                <div class="rating-row">
+                    <span class="stars">★</span>
+                    <div class="rating-bar"></div>
+                </div>
+
+                <div class="rating-row">
+                    <span class="stars">★★</span>
+                    <div class="rating-bar"></div>
+                </div>
+
+                <div class="rating-row">
+                    <span class="stars">★★★</span>
+                    <div class="rating-bar"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Right section: Information about the place -->
+        <section class="eiffel-information">
+
+            <h2>THE EIFFEL TOWER</h2>
+
+            <!-- Description -->
+            <h3>DESCRIPTION</h3>
+            <p>
+                A wrought-iron landmark in Paris, France,
+                standing 330 meters (1,083 feet) tall
+                including its antennas.
+            </p>
+
+            <p>
+                It is very touristy and one of the
+                most visited landmarks in the world.
+            </p>
+
+            <!-- Address -->
+            <h3>ADDRESS</h3>
+            <p>
+                5 Avenue Anatole France,<br>
+                75007 Paris, France
+            </p>
+
+            <!-- Opening hours -->
+            <h3>OPENING HOURS</h3>
+            <p>Check official website for opening hours.</p>
+
+            <!-- Arrow button for future navigation -->
+            <button class="next-button" type="button"
+                    aria-label="Next page">
+                →
+            </button>
+
+        </section>
+
+        <!-- Bottom section: User advice -->
+        <section class="advice-section">
+
+            <h3>MY ADVICE</h3>
+
+            <!-- Form for writing a review -->
+            <div class="advice-form">
+
+                <div class="advice-input">
+                    <label for="advice-text">WRITE</label>
+
+                    <textarea
+                        id="advice-text"
+                        placeholder="Share your experience..."
+                    ></textarea>
+                </div>
+
+                <button type="button" class="enter-button">
+                    ENTER
+                </button>
+
+            </div>
+
+            <!-- Example review -->
+            <div class="example-review">
+                <p>
+                    A very beautiful, very touristy spot!
+                    Ideal for great photos, whether alone
+                    or with the family.
+                </p>
+
+                <p>REALLY BEAUTIFUL PLACE</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

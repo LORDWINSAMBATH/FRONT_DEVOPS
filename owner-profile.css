@@ -1,0 +1,371 @@
+
+/* ===== GLOBAL CSS ===== */
+
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #4a3b24;
+    color: white;
+}
+
+/* ===== MAIN PAGE CONTAINER ===== */
+
+/* Place the sidebar and main content next to each other */
+.owner-wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* ===== SIDEBAR ===== */
+
+/* Brown sidebar on the left side */
+.sidebar {
+    width: 25rem;
+    min-height: 100vh;
+    background-color: #493b24;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2.5rem;
+    flex-shrink: 0;
+}
+
+/* Restaurant owner information */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+/* Profile avatar */
+.profile-avatar {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Restaurant name and email */
+.profile-details {
+    width: 100%;
+    text-align: left;
+}
+
+.profile-details p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* ===== SIDEBAR NAVIGATION ===== */
+
+/* Navigation menu below the profile information */
+.sidebar-nav {
+    width: 100%;
+}
+
+.sidebar-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    list-style: none;
+}
+
+/* Navigation links */
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+}
+
+/* Navigation icons */
+.sidebar-nav span {
+    font-size: 2rem;
+    width: 2.5rem;
+    text-align: center;
+}
+
+/* Hover effect for navigation links */
+.sidebar-nav a:hover {
+    opacity: 0.7;
+}
+
+/* ===== SIGN OUT ===== */
+
+/* Place the sign out link at the bottom */
+.sign-out {
+    margin-top: auto;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.sign-out a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.sign-out a:hover {
+    opacity: 0.7;
+}
+
+/* ===== MAIN CONTENT ===== */
+
+/* Main area with restaurant image and reviews */
+.owner-content {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 4rem;
+}
+
+/* ===== BLURRED BACKGROUND ===== */
+
+/* Blurred restaurant image behind the content */
+.owner-background {
+    position: absolute;
+    inset: -2rem;
+
+    background:
+        linear-gradient(
+            rgba(65, 48, 27, 0.35),
+            rgba(65, 48, 27, 0.35)
+        ),
+        url("images copy/typical-cafe-scene-paris.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(12px);
+    z-index: 0;
+}
+
+/* Keep the content above the blurred background */
+.restaurant-section,
+.reviews-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== RESTAURANT SECTION ===== */
+
+/* Center the restaurant image */
+.restaurant-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+/* Restaurant image container */
+.restaurant-image {
+    position: relative;
+    width: 48rem;
+    max-width: 100%;
+    height: 28rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Make the image fill its container */
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== MANAGE YOUR PLACES BUTTON ===== */
+
+/* Button displayed on top of the restaurant image */
+.manage-button {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    background-color: #e5e5e5;
+    color: #222;
+    border: 1px solid #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Button hover effect */
+.manage-button:hover {
+    background-color: #d0d0d0;
+}
+
+/* ===== LATEST REVIEWS ===== */
+
+/* Dark brown container for customer reviews */
+.reviews-section {
+    width: 58rem;
+    max-width: 100%;
+    background-color: #493b24;
+    padding: 2.5rem 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Reviews heading */
+.reviews-title {
+    background-color: #e5e5e5;
+    border: 1px solid #222;
+    width: 20rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Heading text */
+.reviews-title h2 {
+    color: #222;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* ===== REVIEW LIST ===== */
+
+/* Place reviews vertically */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* Individual customer review */
+.review {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Review text */
+.review p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+/* Reply link next to each review */
+.review a {
+    color: #e0d0b2;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Hover effect for reply links */
+.review a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Adjust layout for tablets */
+@media screen and (max-width: 900px) {
+
+    .sidebar {
+        width: 20rem;
+        padding: 3rem 2rem;
+    }
+
+    .owner-content {
+        padding: 4rem 2rem;
+    }
+
+    .restaurant-image {
+        height: 24rem;
+    }
+
+    .reviews-section {
+        padding: 2rem;
+    }
+}
+
+/* Adjust layout for mobile phones */
+@media screen and (max-width: 600px) {
+
+    /* Stack the sidebar above the main content */
+    .owner-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .profile-info {
+        margin-bottom: 3rem;
+    }
+
+    .profile-details {
+        text-align: center;
+    }
+
+    .sidebar-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .sidebar-nav a {
+        font-size: 1.2rem;
+    }
+
+    .sign-out {
+        margin-top: 2rem;
+        padding-top: 0;
+    }
+
+    .owner-content {
+        min-height: 70vh;
+        padding: 3rem 2rem;
+    }
+
+    .restaurant-section {
+        margin-bottom: 3rem;
+    }
+
+    .restaurant-image {
+        height: 22rem;
+    }
+
+    .reviews-section {
+        padding: 2rem;
+    }
+
+    .reviews-title {
+        max-width: 100%;
+    }
+}
