@@ -1,4 +1,4 @@
-*{
+**{
     box-sizing: border-box;
 }
 
@@ -52,4 +52,14 @@ button{
     box-shadow: 0 2px 4px rgb(red green blue );
 
 
+}
+.modal-container {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease; /* Indispensable pour l'animation ! */
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
 }
