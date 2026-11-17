@@ -163,3 +163,131 @@ nav ul a:hover {
     background-color: #d4af37;
     color: white;
 }
+
+/* Conteneur global des popups */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* La boîte dorée translucide */
+.modal {
+    background-color: rgba(212, 175, 55, 0.88);
+    backdrop-filter: blur(4px); /* Léger flou sur le château derrière */
+    padding: 4rem 5rem;
+    border-radius: 2rem;
+    width: 90%;
+    max-width: 48rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-container.show .modal {
+    transform: translateY(0);
+}
+
+.modal h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+/* Champs de saisie avec ligne blanche uniquement (comme sur la maquette) */
+.input-line {
+    margin-bottom: 2.2rem;
+}
+
+.input-line input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 0.2rem;
+    font-size: 1.6rem;
+    color: white;
+    outline: none;
+    font-family: inherit;
+}
+
+.input-line input::placeholder {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Boutons sombres arrondis */
+.login-actions-row {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem 0 2rem 0;
+}
+
+.btn-dark {
+    background-color: #4a3f28; /* Ton brun/noir foncé de la maquette */
+    color: white;
+    border: none;
+    padding: 1.1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #332b1b;
+}
+
+/* Bouton Sign up centré */
+.btn-submit-signup {
+    width: 65%;
+    margin-top: 1.5rem;
+    flex: none;
+}
+
+/* Liens du bas dans Log in */
+.modal-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+}
+
+.modal-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.modal-links a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton croix */
+.close-btn {
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
