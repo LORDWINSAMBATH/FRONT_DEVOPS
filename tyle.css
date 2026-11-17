@@ -8,11 +8,11 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; 
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Conteneur global avec l'image de fond */
+
 .hero-wrapper {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25)), 
@@ -25,7 +25,7 @@ html {
     flex-direction: column;
 }
 
-/* Navigation (ta structure adaptée) */
+
 nav {
     min-height: 10vh;
     display: flex;
@@ -63,7 +63,7 @@ nav ul a:hover {
     opacity: 0.7;
 }
 
-/* Section principale Hero */
+
 .hero {
     min-height: 90vh;
     width: 92%;
@@ -74,7 +74,7 @@ nav ul a:hover {
     padding-bottom: 4rem;
 }
 
-/* Bloc central */
+
 .hero-center {
     margin: auto;
     text-align: center;
@@ -90,7 +90,7 @@ nav ul a:hover {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Barre de recherche */
+
 .search-bar {
     display: flex;
     background-color: rgba(235, 235, 235, 0.85);
@@ -115,7 +115,6 @@ nav ul a:hover {
 }
 
 .search-bar button {
-    background-color: #d4af37; /* Jaune doré / moutarde */
     color: white;
     border: none;
     padding: 0 3.5rem;
@@ -130,7 +129,7 @@ nav ul a:hover {
     background-color: #bfa030;
 }
 
-/* Bas de page (Infos + Bouton Explore) */
+
 .hero-bottom {
     display: flex;
     justify-content: space-between;
@@ -148,7 +147,6 @@ nav ul a:hover {
     margin-bottom: 0;
 }
 
-/* Bouton Explore */
 .explore-btn {
     background-color: rgba(212, 175, 55, 0.85);
     color: rgba(255, 255, 255, 0.85);
@@ -164,8 +162,8 @@ nav ul a:hover {
     color: white;
 }
 
-/* Conteneur global des popups */
-/* --- STYLE DE LA MODALE DE LOGIN --- */
+
+
 
 .modal-container {
     position: fixed;
@@ -188,7 +186,6 @@ nav ul a:hover {
     pointer-events: auto;
 }
 
-/* La boîte dorée principale */
 .modal {
     background-color: rgba(212, 175, 55, 0.92);
     backdrop-filter: blur(5px);
@@ -214,7 +211,7 @@ nav ul a:hover {
     margin-bottom: 3.5rem;
 }
 
-/* Champs de texte (Email et Password) épurés avec une ligne blanche */
+
 .input-line {
     margin-bottom: 2.5rem;
     text-align: left;
@@ -236,7 +233,7 @@ nav ul a:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Les deux boutons "Log in as user" et "Log in as owner" côte à côte */
+
 .login-actions-row {
     display: flex;
     gap: 1.5rem;
@@ -260,7 +257,7 @@ nav ul a:hover {
     background-color: #2b2418;
 }
 
-/* Liens du bas (create an account / forgot password) */
+
 .modal-links {
     display: flex;
     justify-content: space-between;
@@ -278,7 +275,7 @@ nav ul a:hover {
     text-decoration: underline;
 }
 
-/* Bouton croix (fermeture) en haut à droite */
+
 .close-btn {
     position: absolute;
     top: 1.8rem;
