@@ -8,7 +8,147 @@
     <!-- Police moderne proche de la maquette -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Black+Ops+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo&family=Orbitron:wght@400..900&family=Quicksand:wght@300..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+     
+    <style>
+        /* Styles de base de la modale */
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-container.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* La boîte dorée principale */
+        .modal {
+            background-color: rgba(212, 175, 55, 0.92);
+            backdrop-filter: blur(5px);
+            padding: 4rem 5rem;
+            border-radius: 2rem;
+            width: 90%;
+            max-width: 48rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-container.show .modal {
+            transform: translateY(0);
+        }
+
+        .modal h2 {
+            color: white;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 3.5rem;
+        }
+
+        /* Champs de texte épurés avec une ligne blanche */
+        .input-group, .input-line {
+            margin-bottom: 2.5rem;
+            text-align: left;
+        }
+
+        .modal input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.85);
+            padding: 0.8rem 0.2rem;
+            font-size: 1.6rem;
+            color: white;
+            outline: none;
+            font-family: inherit;
+        }
+
+        .modal input::placeholder {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Boutons de rôles et d'action */
+        .login-actions-row {
+            display: flex;
+            gap: 1.5rem;
+            margin: 3rem 0 2.5rem 0;
+        }
+
+        .btn-role, .btn-dark {
+            background-color: #3d3423;
+            color: white;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+            flex: 1;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-role a, .btn-dark a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .btn-role:hover, .btn-dark:hover {
+            background-color: #2b2418;
+        }
+
+        .btn-submit-signup {
+            width: 65%;
+            margin: 2rem auto 0 auto;
+            display: block;
+        }
+
+        /* Liens du bas */
+        .modal-links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.35rem;
+            padding: 0 0.5rem;
+        }
+
+        .modal-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.95;
+        }
+
+        .modal-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bouton croix (fermeture) */
+        .close-btn {
+            position: absolute;
+            top: 1.8rem;
+            right: 2.2rem;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 2.2rem;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
+
 <body>
 
     <div class="hero-wrapper">
@@ -50,6 +190,7 @@
   !-- ===== LA FENÊTRE MODALE DE LOGIN (Popup) ===== 
 
     <div class="modal-container" id="login-modal">
+    
         <div class="modal">
             <h2>Log in</h2>
             
@@ -62,8 +203,8 @@
                 </div>
 
                 <div class="login-actions-row">
-                    <button type="button" class="btn-role">Log in as user</button>
-                    <button type="button" class="btn-role">Log in as owner</button>
+                    <button type="button" class="btn-role"><a href="user-profile.html">Log in as user </a></button>
+                    <button type="button" class="btn-role"> <a href="owner-profile .html">Log in as owner</a></button>
                 </div>
 
                 <div class="modal-links">
